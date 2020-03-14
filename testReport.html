@@ -1,0 +1,5762 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Data Comparison</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+/* SPDX-Copyright: Copyright (c) Capital One Services, LLC */
+/* SPDX-License-Identifier: Apache-2.0 */
+/* Copyright 2017 Capital One Services, LLC */
+/*
+/* Licensed under the Apache License, Version 2.0 (the "License"); */
+/* you may not use this file except in compliance with the License. */ 
+/*
+/* You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 */
+/*
+/* Unless required by applicable law or agreed to in writing, software distributed */
+/* under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS */
+/* OF ANY KIND, either express or implied. */
+/* */
+/* See the License for the specific language governing permissions and limitations under the License. */
+
+
+/* Set the table element */
+  table {
+    overflow: auto;
+    width: auto;
+    display: block;
+    font-family: sans-serif;
+  }
+
+/* Table headers */
+th {
+  color: white;
+  background-color: rgb(121, 122, 123);
+  text-align: center;
+  font-weight: normal;
+  padding: 8px 7px;
+}
+
+/* Table cell */
+td {
+  padding: 4px 4px;
+  background-color: rgb(239, 240, 241);
+  color: rgb(111, 110, 109);
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+/* Backgroun */
+body {
+  max-width: 800px;
+  font-family: sans-serif;
+  background-color: white;
+  font-size: 12px;
+  margin: auto;
+  padding: 4px;
+  line-height: 20px;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Data Comparison</h1>
+
+<p>Date comparison run: 2020-03-14 11:15:27<br/>
+Comparison run on R version 3.4.3 (2017-11-30)<br/>
+With dataCompareR version 0.1.2  </p>
+
+<h1>Meta Summary</h1>
+
+<table><thead>
+<tr>
+<th align="left">Dataset Name</th>
+<th align="left">Number of Rows</th>
+<th align="left">Number of Columns</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">Set1</td>
+<td align="left">192</td>
+<td align="left">341</td>
+</tr>
+<tr>
+<td align="left">Set2</td>
+<td align="left">192</td>
+<td align="left">341</td>
+</tr>
+</tbody></table>
+
+<h1>Variable Summary</h1>
+
+<p>Number of columns in common: 341<br/>
+Number of columns only in Set1: 0<br/>
+Number of columns only in Set2: 0<br/>
+Number of columns with a type mismatch: 0<br/>
+Match keys : 1   - RECORD_ID</p>
+
+<h1>Row Summary</h1>
+
+<p>Total number of rows read from Set1: 192<br/>
+Total number of rows read from Set2: 192<br/>
+Number of rows in common: 192<br/>
+Number of rows dropped from Set1: 0<br/>
+Number of rows dropped from  Set2: 0  </p>
+
+<h1>Data Values Comparison Summary</h1>
+
+<p>Number of columns compared with ALL rows equal: 205<br/>
+Number of columns compared with SOME rows unequal: 135<br/>
+Number of columns with missing value differences: 0  </p>
+
+<p>Columns with all rows equal : ABASTECE<em>AGUA, ACCION_EMBARAZADA, ALUMBRADO, BASURA, BIENES_SERVICIOS</em><strong>1, BIENES_SERVICIOS</strong><em>10, BIENES_SERVICIOS</em><strong>11, BIENES_SERVICIOS</strong><em>12, BIENES_SERVICIOS</em><strong>13, BIENES_SERVICIOS</strong><em>14, BIENES_SERVICIOS</em><strong>15, BIENES_SERVICIOS</strong><em>16, BIENES_SERVICIOS</em><strong>2, BIENES_SERVICIOS</strong><em>3, BIENES_SERVICIOS</em><strong>4, BIENES_SERVICIOS</strong><em>5, BIENES_SERVICIOS</em><strong>7, BIENES_SERVICIOS</strong><em>8, BIENES_SERVICIOS</em><strong>97, BIENES_SERVICIOS</strong><em>98, CANTIDAD_CONTROLES, CLASSIFICACION, COMBUSTIBLE_PRINCIPAL, COMO_ELIMINAR_CRI</em><strong>0, COMO_ELIMINAR_CRI</strong><em>1, COMO_ELIMINAR_CRI</em><strong>3, COMO_ELIMINAR_CRI</strong><em>5, COMO_ELIMINAR_CRI</em><strong>6, COMO_ELIMINAR_CRI</strong><em>8, COMO_ELIMINAR_CRI</em><strong>9, COMO_ELIMINAR_CRI</strong><em>97, COMO_ELIMINAR_CRI</em><strong>98, COMO_PREV_ZIKA</strong><em>0, COMO_PREV_ZIKA</em><strong>10, COMO_PREV_ZIKA</strong><em>12, COMO_PREV_ZIKA</em><strong>15, COMO_PREV_ZIKA</strong><em>2, COMO_PREV_ZIKA</em><strong>3, COMO_PREV_ZIKA</strong><em>4, COMO_PREV_ZIKA</em><strong>5, COMO_PREV_ZIKA</strong><em>6, COMO_PREV_ZIKA</em><strong>7, COMO_PREV_ZIKA</strong><em>8, COMO_PREV_ZIKA</em><strong>9, COMO_PREV_ZIKA</strong><em>97, COMO_PREV_ZIKA</em><strong>98, CONTAGIARSE_ZIKA</strong><em>1, CONTAGIARSE_ZIKA</em><strong>10, CONTAGIARSE_ZIKA</strong><em>11, CONTAGIARSE_ZIKA</em><strong>12, CONTAGIARSE_ZIKA</strong><em>2, CONTAGIARSE_ZIKA</em><strong>3, CONTAGIARSE_ZIKA</strong><em>6, CONTAGIARSE_ZIKA</em><strong>7, CONTAGIARSE_ZIKA</strong><em>8, CONTAGIARSE_ZIKA</em><strong>9, CONTAGIARSE_ZIKA</strong><em>97, CONTAGIARSE_ZIKA</em><strong>98, COSAS_HACE_PREVENIR</strong><em>1, COSAS_HACE_PREVENIR</em><strong>10, COSAS_HACE_PREVENIR</strong><em>12, COSAS_HACE_PREVENIR</em><strong>13, COSAS_HACE_PREVENIR</strong><em>14, COSAS_HACE_PREVENIR</em><strong>15, COSAS_HACE_PREVENIR</strong><em>16, COSAS_HACE_PREVENIR</em><strong>18, COSAS_HACE_PREVENIR</strong><em>2, COSAS_HACE_PREVENIR</em><strong>5, COSAS_HACE_PREVENIR</strong><em>6, COSAS_HACE_PREVENIR</em><strong>8, COSAS_HACE_PREVENIR</strong><em>9, COSAS_HACE_PREVENIR</em><strong>97, CUAL_RIESGO_BEBE</strong><em>1, CUAL_RIESGO_BEBE</em><strong>2, CUAL_RIESGO_BEBE</strong><em>3, CUAL_RIESGO_BEBE</em><strong>97, CUAL_RIESGO_BEBE</strong><em>98, DIAGNOSTICADO_DCZ, DONDE_REPRODUCEN</em><strong>1, DONDE_REPRODUCEN</strong><em>4, DONDE_REPRODUCEN</em><strong>97, DONDE_REPRODUCEN</strong><em>98, EMBARAZADA_TRANSMITE_BEBE, ENCUESTA_CAP_COMPLETE, ESPERMI_ESPONTANEO, EXISTEN_TRATAMIENTOS, GRAVE_DENGUE, GRAVE_ZIKA, HA_ELIMINADO, HACE_ACCION_EMBARAZADA</em><strong>1, HACE_ACCION_EMBARAZADA</strong><em>10, HACE_ACCION_EMBARAZADA</em><strong>11, HACE_ACCION_EMBARAZADA</strong><em>12, HACE_ACCION_EMBARAZADA</em><strong>13, HACE_ACCION_EMBARAZADA</strong><em>14, HACE_ACCION_EMBARAZADA</em><strong>15, HACE_ACCION_EMBARAZADA</strong><em>16, HACE_ACCION_EMBARAZADA</em><strong>2, HACE_ACCION_EMBARAZADA</strong><em>3, HACE_ACCION_EMBARAZADA</em><strong>4, HACE_ACCION_EMBARAZADA</strong><em>5, HACE_ACCION_EMBARAZADA</em><strong>6, HACE_ACCION_EMBARAZADA</strong><em>7, HACE_ACCION_EMBARAZADA</em><strong>8, HACE_ACCION_EMBARAZADA</strong><em>9, HACE_ACCION_EMBARAZADA</em><strong>97, HACE_ACCION_EMBARAZADA</strong><em>98, HIZO_ELIMINO</em><strong>0, HIZO_ELIMINO</strong><em>1, HIZO_ELIMINO</em><strong>2, HIZO_ELIMINO</strong><em>3, HIZO_ELIMINO</em><strong>4, HIZO_ELIMINO</strong><em>5, HIZO_ELIMINO</em><strong>6, HIZO_ELIMINO</strong><em>7, HIZO_ELIMINO</em><strong>8, HIZO_ELIMINO</strong><em>97, HIZO_ELIMINO</em><strong>98, MATERIAL_PISO, MATERIAL_TECHO, MEDIDA_PREVENCION, MESES_EMBARAZO, MOSQUITEROS, NO_PARTICIPAR, OIDO_ZIKA, OTRA_BASURA, OTRO_ABASTECE_AGUA, OTRO_ACCION_EMBARAZADA, OTRO_ALUMBRADO, OTRO_COMBUSTIBLE, OTRO_DIRIGIDO, OTRO_EDUCACION, OTRO_ESPONTANEO, OTRO_HA_USADO, OTRO_PAREDES, OTRO_PISO, OTRO_SERVICIOHIGI_NICO, OTRO_TECHO, OTRO_VIVENDA, OTROS_BIENES_SERVICIOS, PARTICIPAR_ENTREVISTA, PRESENTAN_SINTOMA, PREV_TRANS_EMBARAZADA</strong><em>0, PREV_TRANS_EMBARAZADA</em><strong>1, PREV_TRANS_EMBARAZADA</strong><em>13, PREV_TRANS_EMBARAZADA</em><strong>15, PREV_TRANS_EMBARAZADA</strong><em>2, PREV_TRANS_EMBARAZADA</em><strong>5, PREV_TRANS_EMBARAZADA</strong><em>6, PREV_TRANS_EMBARAZADA</em><strong>97, PREV_TRANS_EMBARAZADA</strong><em>98, PREVENIR_ZIKA, PUEDE_ELIMINAR_CRI, QUIEN_MOSQUITERO</em><strong>0, QUIEN_MOSQUITERO</strong><em>1, QUIEN_MOSQUITERO</em><strong>2, QUIEN_MOSQUITERO</strong><em>3, QUIEN_MOSQUITERO</em><strong>4, QUIEN_MOSQUITERO</strong><em>5, QUIEN_MOSQUITERO</em><strong>98, QUIEN_VISITAS_REUNION</strong><em>1, QUIEN_VISITAS_REUNION</em><strong>3, QUIEN_VISITAS_REUNION</strong><em>4, QUIEN_VISITAS_REUNION</em><strong>5, QUIEN_VISITAS_REUNION</strong><em>6, QUIEN_VISITAS_REUNION</em><strong>7, QUIEN_VISITAS_REUNION</strong><em>8, QUIEN_VISITAS_REUNION</em><strong>97, QUIEN_VISITAS_REUNION</strong><em>98, REALIZADO_ALGUNCONTROL, RETIRO_ESPONTANEO, RIESGO_BARRIO_DENGUE, RIESGO_CASA_DENGUE, RITMO_HA_USADO, RITMO_ULTMES, SERVICIO_HIGIENICO</em><strong>4, SERVICIO_HIGIENICO</strong><em>5, SERVICIO_HIGIENICO</em><strong>97, SERVICIO_HIGIENICO</strong><em>98, SINTOMAS</em><strong>1, SINTOMAS</strong><em>2, SINTOMAS</em><strong>6, SINTOMAS</strong><em>97, SINTOMAS</em><strong>98, T_ULTMES, TIENE_PAREJA, TIPO_VIVIENDA, TOTAL_CALCULADO, TRATAMIENTOS_RECOMIENDAN</strong><em>1, TRATAMIENTOS_RECOMIENDAN</em><strong>2, TRATAMIENTOS_RECOMIENDAN</strong><em>98, ULTIMA_ELIMINO, UNLUGAR_COCINAR, VASECTOMIA_DIRIGIDO, VASECTOMIA_ESPONTANEO, VASECTOMIA_ULTMES, VEHICULO</em><strong>0, VEHICULO</strong><em>1, VEHICULO</em><strong>2, VEHICULO</strong><em>3, VEHICULO</em><strong>4, VEHICULO</strong><em>5, VEHICULO</em><strong>97, VEHICULO</strong>_98, VISITAS_REUNIONES</p>
+
+<p>Summary of columns with some rows unequal: </p>
+
+<table><thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Type (in Set1)</th>
+<th align="left">Type (in Set2)</th>
+<th align="right"># differences</th>
+<th align="left">Max difference</th>
+<th align="right"># NAs</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">BARRIO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">BIENES<em>SERVICIOS</em>__17</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">BIENES<em>SERVICIOS</em>__18</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">BIENES<em>SERVICIOS</em>__19</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">BIENES<em>SERVICIOS</em>__6</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">BIENES<em>SERVICIOS</em>__9</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CODIGO_NUEVO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CODIGO_ORIGINAL</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">12</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>ELIMINAR_CRI</em>__2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>ELIMINAR_CRI</em>__4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>ELIMINAR_CRI</em>__7</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>PREV_ZIKA</em>__1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>PREV_ZIKA</em>__11</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>PREV_ZIKA</em>__13</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COMO<em>PREV_ZIKA</em>__14</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDON_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">6</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDON_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDON_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDON_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDONF_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDONF_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDONF_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONDONF_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONTAGIARSE<em>ZIKA</em>__4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CONTAGIARSE<em>ZIKA</em>__5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COSAS<em>HACE_PREVENIR</em>__11</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COSAS<em>HACE_PREVENIR</em>__3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COSAS<em>HACE_PREVENIR</em>__4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">COSAS<em>HACE_PREVENIR</em>__7</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CUAL<em>RIESGO_BEBE</em>__4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CUAL<em>RIESGO_BEBE</em>__5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CUAL<em>RIESGO_BEBE</em>__6</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">CUARTOS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">DONDE<em>REPRODUCEN</em>__2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">DONDE<em>REPRODUCEN</em>__3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">DONDE<em>REPRODUCEN</em>__5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EDAD</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">6</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EDUCACION</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">EMBARAZADA_MEF</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">6</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ENCUESTADORA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">55</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ESPERMI_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ESPERMI_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ESPERMI_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">FECHA_ENTREVISTA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">FECHA_NACIMIENTO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">GRADO_ANO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">111</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">HABLADO_PAREJA_CONDONES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">HIZO<em>ELIMINO</em>__9</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">IMPLANTE_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">IMPLANTE_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">IMPLANTE_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">IMPLANTE_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">INYECCION_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">INYECCION_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">INYECCION_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">INYECCION_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">8</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">LIDAGRUA_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">LIGADURA_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">LIGADURA_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">LIGADURA_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MANGAS_PANTALONES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MANGAS_PANTALONES_ULTDIA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MATERIAL_PAREDES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MELA_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MELA_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MELA_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">MELA_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTRO_CASA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTRO_HACE_PREVENIR</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">6</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTRO_PERSONA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">10</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTRO_PLANIFICACION_NOMBRE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTRO_REPRODUCEN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">19</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTRO_ULTMESOTRO_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_COMO_PREV_ZIKA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">7</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_CONTAGIARSE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_ELIMINAR_CRI</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">6</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_HIZO_ELIMINO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_PLANIFICACION</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_PREV_TRANS_EMBARAZADA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_RIESGOS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_SINTOMAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">24</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_TRATAMIENTOS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">44</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">OTROS_VEHICULOS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PAREJA_CONDON_SIEMPRE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PAREJA_USO_CONDON</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PAREJA_VIVECASA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">7</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PASTILLA_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PASTILLA_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PASTILLA_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PASTILLA_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PPMS_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PPMS_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PPMS_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">4</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PPMS_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__10</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__11</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__12</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__14</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__7</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__8</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PREV<em>TRANS_EMBARAZADA</em>__9</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">QUIEN<em>VISITAS_REUNION</em>__2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RELATION_ULT3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">REPELENTE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">REPELENTE_ULTDIA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RETIRO_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RETIRO_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RETIRO_ULTMES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RIESGO_BARRIO_ZIKA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RIESGO_BEBE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RIESGO_CASA_ZIKA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RITMO_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">RITMO_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SERVICIO<em>HIGIENICO</em>__1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SERVICIO<em>HIGIENICO</em>__2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SERVICIO<em>HIGIENICO</em>__3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SEXO_EDAD_DIAGNOSTICADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">27</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SINTOMAS___3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SINTOMAS___4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SINTOMAS___5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">T_DIRIGIDO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">T_ESPONTANEO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">T_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">3</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">TIPO_CASA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">TOTAL_MUJERES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">TOTAL_PERSONAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">TOTAL_VARONES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">TRATAMIENTOS<em>RECOMIENDAN</em>__3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">TRATAMIENTOS<em>RECOMIENDAN</em>__97</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">2</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ULTIMAVEZ_VISITA_REUNION</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">VASECTOMIA_HA_USADO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">VIVE_CASA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ZIKA_TRANS_SEXUAL</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="right">5</td>
+<td align="left">NA</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+
+<h1>Unequal column details</h1>
+
+<h4>Column -  BARRIO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">BARRIO (Set1)</th>
+<th align="left">BARRIO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">105</td>
+<td align="left">22</td>
+<td align="left">26</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">119</td>
+<td align="left">22</td>
+<td align="left">25</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  BIENES<em>SERVICIOS</em>__17</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">BIENES<em>SERVICIOS</em>__17 (Set1)</th>
+<th align="left">BIENES<em>SERVICIOS</em>__17 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">12</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  BIENES<em>SERVICIOS</em>__18</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">BIENES<em>SERVICIOS</em>__18 (Set1)</th>
+<th align="left">BIENES<em>SERVICIOS</em>__18 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">50</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  BIENES<em>SERVICIOS</em>__19</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">BIENES<em>SERVICIOS</em>__19 (Set1)</th>
+<th align="left">BIENES<em>SERVICIOS</em>__19 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">191</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  BIENES<em>SERVICIOS</em>__6</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">BIENES<em>SERVICIOS</em>__6 (Set1)</th>
+<th align="left">BIENES<em>SERVICIOS</em>__6 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">53</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  BIENES<em>SERVICIOS</em>__9</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">BIENES<em>SERVICIOS</em>__9 (Set1)</th>
+<th align="left">BIENES<em>SERVICIOS</em>__9 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">98</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CODIGO_NUEVO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CODIGO_NUEVO (Set1)</th>
+<th align="left">CODIGO_NUEVO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">106</td>
+<td align="left">131B01025-1</td>
+<td align="left">131BO1025-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">154</td>
+<td align="left">156D03005-1</td>
+<td align="left">156D03335-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">150</td>
+<td align="left">154K0610-1</td>
+<td align="left">154K6010-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">002-1-7</td>
+<td align="left">002-1-6-7</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CODIGO_ORIGINAL</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CODIGO_ORIGINAL (Set1)</th>
+<th align="left">CODIGO_ORIGINAL (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">71</td>
+<td align="left">112H04014-1</td>
+<td align="left">112H4014-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">85</td>
+<td align="left">114F02080</td>
+<td align="left">119F02080-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">48</td>
+<td align="left">017G03024-1</td>
+<td align="left">017G08024-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">121</td>
+<td align="left">135k34039-1</td>
+<td align="left">135K34039-1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">186</td>
+<td align="left">G.P 001</td>
+<td align="left">G.P001</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>ELIMINAR_CRI</em>__2</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>ELIMINAR_CRI</em>__2 (Set1)</th>
+<th align="left">COMO<em>ELIMINAR_CRI</em>__2 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">111</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>ELIMINAR_CRI</em>__4</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>ELIMINAR_CRI</em>__4 (Set1)</th>
+<th align="left">COMO<em>ELIMINAR_CRI</em>__4 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">57</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>ELIMINAR_CRI</em>__7</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>ELIMINAR_CRI</em>__7 (Set1)</th>
+<th align="left">COMO<em>ELIMINAR_CRI</em>__7 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">35</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>PREV_ZIKA</em>__1</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__1 (Set1)</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__1 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">66</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>PREV_ZIKA</em>__11</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__11 (Set1)</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__11 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">4</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>PREV_ZIKA</em>__13</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__13 (Set1)</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__13 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">89</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COMO<em>PREV_ZIKA</em>__14</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__14 (Set1)</th>
+<th align="left">COMO<em>PREV_ZIKA</em>__14 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">6</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDON_DIRIGIDO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDON_DIRIGIDO (Set1)</th>
+<th align="left">CONDON_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">37</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">159</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">94</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDON_ESPONTANEO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDON_ESPONTANEO (Set1)</th>
+<th align="left">CONDON_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">126</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">159</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">94</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">115</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDON_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDON_HA_USADO (Set1)</th>
+<th align="left">CONDON_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">15</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDON_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDON_ULTMES (Set1)</th>
+<th align="left">CONDON_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">24</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">112</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDONF_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDONF_DIRIGIDO (Set1)</th>
+<th align="left">CONDONF_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">25</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">94</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDONF_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDONF_ESPONTANEO (Set1)</th>
+<th align="left">CONDONF_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">94</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDONF_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDONF_HA_USADO (Set1)</th>
+<th align="left">CONDONF_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">105</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONDONF_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONDONF_ULTMES (Set1)</th>
+<th align="left">CONDONF_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">25</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">131</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONTAGIARSE<em>ZIKA</em>__4</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONTAGIARSE<em>ZIKA</em>__4 (Set1)</th>
+<th align="left">CONTAGIARSE<em>ZIKA</em>__4 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">23</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CONTAGIARSE<em>ZIKA</em>__5</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CONTAGIARSE<em>ZIKA</em>__5 (Set1)</th>
+<th align="left">CONTAGIARSE<em>ZIKA</em>__5 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">23</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COSAS<em>HACE_PREVENIR</em>__11</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__11 (Set1)</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__11 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">84</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COSAS<em>HACE_PREVENIR</em>__3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__3 (Set1)</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">175</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">104</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COSAS<em>HACE_PREVENIR</em>__4</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__4 (Set1)</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__4 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">175</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">104</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  COSAS<em>HACE_PREVENIR</em>__7</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__7 (Set1)</th>
+<th align="left">COSAS<em>HACE_PREVENIR</em>__7 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">39</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">84</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CUAL<em>RIESGO_BEBE</em>__4</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CUAL<em>RIESGO_BEBE</em>__4 (Set1)</th>
+<th align="left">CUAL<em>RIESGO_BEBE</em>__4 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">110</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CUAL<em>RIESGO_BEBE</em>__5</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CUAL<em>RIESGO_BEBE</em>__5 (Set1)</th>
+<th align="left">CUAL<em>RIESGO_BEBE</em>__5 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">34</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CUAL<em>RIESGO_BEBE</em>__6</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CUAL<em>RIESGO_BEBE</em>__6 (Set1)</th>
+<th align="left">CUAL<em>RIESGO_BEBE</em>__6 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">110</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  CUARTOS</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">CUARTOS (Set1)</th>
+<th align="left">CUARTOS (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">61</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  DONDE<em>REPRODUCEN</em>__2</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">DONDE<em>REPRODUCEN</em>__2 (Set1)</th>
+<th align="left">DONDE<em>REPRODUCEN</em>__2 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">110</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  DONDE<em>REPRODUCEN</em>__3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">DONDE<em>REPRODUCEN</em>__3 (Set1)</th>
+<th align="left">DONDE<em>REPRODUCEN</em>__3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">23</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  DONDE<em>REPRODUCEN</em>__5</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">DONDE<em>REPRODUCEN</em>__5 (Set1)</th>
+<th align="left">DONDE<em>REPRODUCEN</em>__5 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">141</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">124</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  EDAD</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">EDAD (Set1)</th>
+<th align="left">EDAD (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">85</td>
+<td align="left">31</td>
+<td align="left">21</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left">38</td>
+<td align="left">39</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">153</td>
+<td align="left">41</td>
+<td align="left">42</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">24</td>
+<td align="left">25</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">57</td>
+<td align="left">39</td>
+<td align="left">38</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  EDUCACION</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">EDUCACION (Set1)</th>
+<th align="left">EDUCACION (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">23</td>
+<td align="left">8</td>
+<td align="left">4</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  EMBARAZADA_MEF</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">EMBARAZADA_MEF (Set1)</th>
+<th align="left">EMBARAZADA_MEF (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">37</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">136</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">134</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">94</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">141</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  ENCUESTADORA</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">ENCUESTADORA (Set1)</th>
+<th align="left">ENCUESTADORA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">41</td>
+<td align="left">REYNA ISABEL RIVERA ALFARO</td>
+<td align="left">REYNA RIVERA ALFARO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">REYNA ISABEL RIVERA ALFARO</td>
+<td align="left">REYNA RIVERA ALFARO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">49</td>
+<td align="left">JAMILETH  GONZALEZ</td>
+<td align="left">YAMILETH GONZALEZ</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">126</td>
+<td align="left">NOEMA ROCHA OBREGON</td>
+<td align="left">NOEMA RAQUEL ROCHA OBREGÓN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">167</td>
+<td align="left">REYNA ISABEL RIVERA ALFARO</td>
+<td align="left">REYNA RIVERA ALFARO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  ESPERMI_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">ESPERMI_DIRIGIDO (Set1)</th>
+<th align="left">ESPERMI_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">48</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">177</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  ESPERMI_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">ESPERMI_HA_USADO (Set1)</th>
+<th align="left">ESPERMI_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">35</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  ESPERMI_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">ESPERMI_ULTMES (Set1)</th>
+<th align="left">ESPERMI_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">35</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  FECHA_ENTREVISTA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">FECHA_ENTREVISTA (Set1)</th>
+<th align="left">FECHA_ENTREVISTA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">74</td>
+<td align="left">2020-03-02</td>
+<td align="left">2020-02-26</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">2020-02-21</td>
+<td align="left">2020-02-22</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">186</td>
+<td align="left">2020-02-21</td>
+<td align="left">2020-02-29</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  FECHA_NACIMIENTO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">FECHA_NACIMIENTO (Set1)</th>
+<th align="left">FECHA_NACIMIENTO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">184</td>
+<td align="left">1971-03-21</td>
+<td align="left">1921-03-21</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  GRADO_ANO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">GRADO_ANO (Set1)</th>
+<th align="left">GRADO_ANO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">31</td>
+<td align="left">2 AÑO</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">179</td>
+<td align="left">6 GRADO</td>
+<td align="left">6</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">96</td>
+<td align="left">3</td>
+<td align="left">3 AÑO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">157</td>
+<td align="left">5 AÑO</td>
+<td align="left">5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">1 GRADO</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  HABLADO_PAREJA_CONDONES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">HABLADO_PAREJA_CONDONES (Set1)</th>
+<th align="left">HABLADO_PAREJA_CONDONES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">31</td>
+<td align="left">3</td>
+<td align="left">99</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">49</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">108</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  HIZO<em>ELIMINO</em>__9</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">HIZO<em>ELIMINO</em>__9 (Set1)</th>
+<th align="left">HIZO<em>ELIMINO</em>__9 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">178</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  IMPLANTE_DIRIGIDO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">IMPLANTE_DIRIGIDO (Set1)</th>
+<th align="left">IMPLANTE_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">111</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">121</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">115</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">92</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">94</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  IMPLANTE_ESPONTANEO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">IMPLANTE_ESPONTANEO (Set1)</th>
+<th align="left">IMPLANTE_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">121</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">111</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">115</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">94</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">92</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  IMPLANTE_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">IMPLANTE_HA_USADO (Set1)</th>
+<th align="left">IMPLANTE_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">92</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  IMPLANTE_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">IMPLANTE_ULTMES (Set1)</th>
+<th align="left">IMPLANTE_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">92</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  INYECCION_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">INYECCION_DIRIGIDO (Set1)</th>
+<th align="left">INYECCION_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">86</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">169</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  INYECCION_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">INYECCION_ESPONTANEO (Set1)</th>
+<th align="left">INYECCION_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">86</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  INYECCION_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">INYECCION_HA_USADO (Set1)</th>
+<th align="left">INYECCION_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">49</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">169</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">51</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  INYECCION_ULTMES</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">INYECCION_ULTMES (Set1)</th>
+<th align="left">INYECCION_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">51</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">123</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">98</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">154</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  LIDAGRUA_ULTMES</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">LIDAGRUA_ULTMES (Set1)</th>
+<th align="left">LIDAGRUA_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">186</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">106</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">115</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  LIGADURA_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">LIGADURA_DIRIGIDO (Set1)</th>
+<th align="left">LIGADURA_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">179</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">163</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">130</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  LIGADURA_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">LIGADURA_ESPONTANEO (Set1)</th>
+<th align="left">LIGADURA_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">179</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">130</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  LIGADURA_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">LIGADURA_HA_USADO (Set1)</th>
+<th align="left">LIGADURA_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">36</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MANGAS_PANTALONES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MANGAS_PANTALONES (Set1)</th>
+<th align="left">MANGAS_PANTALONES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">29</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MANGAS_PANTALONES_ULTDIA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MANGAS_PANTALONES_ULTDIA (Set1)</th>
+<th align="left">MANGAS_PANTALONES_ULTDIA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">29</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MATERIAL_PAREDES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MATERIAL_PAREDES (Set1)</th>
+<th align="left">MATERIAL_PAREDES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">84</td>
+<td align="left">1</td>
+<td align="left">11</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MELA_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MELA_DIRIGIDO (Set1)</th>
+<th align="left">MELA_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">188</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">88</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">191</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MELA_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MELA_ESPONTANEO (Set1)</th>
+<th align="left">MELA_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">191</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">88</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MELA_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MELA_HA_USADO (Set1)</th>
+<th align="left">MELA_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">188</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  MELA_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">MELA_ULTMES (Set1)</th>
+<th align="left">MELA_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">25</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTRO_CASA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTRO_CASA (Set1)</th>
+<th align="left">OTRO_CASA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">118</td>
+<td align="left">DE SU HERMANO.</td>
+<td align="left">DE SU HERMANO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">68</td>
+<td align="left">DE SUS ABUELOS.</td>
+<td align="left">DE SUS ABUELAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">50</td>
+<td align="left">ABUELITA DE SU ESPOSO</td>
+<td align="left">ABUELA DE SU ESPOSO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTRO_HACE_PREVENIR</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTRO_HACE_PREVENIR (Set1)</th>
+<th align="left">OTRO_HACE_PREVENIR (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">168</td>
+<td align="left">NO MANTENER TIERRA HUMEDA.</td>
+<td align="left">no mantener tierra humeda</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">ECHAR DICEL A LOS BARRILES</td>
+<td align="left">hechar disel a los barriles</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">ECHARLE GAS A LOS BARRILES</td>
+<td align="left">HECHAR GAS A LOS BARRILES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">58</td>
+<td align="left">ELIMINAR LOS CHARCOS</td>
+<td align="left">eliminar charcos</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">177</td>
+<td align="left">DEJAR ENTRAR ABATIZADORES</td>
+<td align="left">DEJAR QUE ENTREN LOS ABATISADORES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTRO_PERSONA</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTRO_PERSONA (Set1)</th>
+<th align="left">OTRO_PERSONA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">19</td>
+<td align="left">TV Y REDES SOCIALES</td>
+<td align="left">LA TV Y LAS REDES SOCIALES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">57</td>
+<td align="left">LA TELEVISION</td>
+<td align="left">LA TELEVISIÓN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">112</td>
+<td align="left">UNIVERSIDAD,CHARLAS</td>
+<td align="left">UNIVERSIDAD CHARLAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">177</td>
+<td align="left">POR TV</td>
+<td align="left">POR LA TELEVISIÓN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">128</td>
+<td align="left">DENGUE CHAT(BTIGADISTA)</td>
+<td align="left">DENGUE CHAT (BRIGADISTAS)</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTRO_PLANIFICACION_NOMBRE</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTRO_PLANIFICACION_NOMBRE (Set1)</th>
+<th align="left">OTRO_PLANIFICACION_NOMBRE (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">75</td>
+<td align="left">PARCHES EN EL VIENTRE</td>
+<td align="left">PARCHES EN EL VIENTRE.</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTRO_REPRODUCEN</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTRO_REPRODUCEN (Set1)</th>
+<th align="left">OTRO_REPRODUCEN (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">10</td>
+<td align="left">EN AGUA LIMPIA, FLOREROS.</td>
+<td align="left">en agua limpia,en floreros</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">165</td>
+<td align="left">ESQUINA DE LOS CUARTOS</td>
+<td align="left">ESQUINA DE LOS CUARTOS MOJADOS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">182</td>
+<td align="left">AGUAS LIMPIAS</td>
+<td align="left">AGUAS LIMPIAS.</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">89</td>
+<td align="left">AGUA LIMPIA</td>
+<td align="left">AGUAS LIMPIAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">62</td>
+<td align="left">TAPONES,MACETERAS</td>
+<td align="left">MASETERAS,TAPONES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTRO_ULTMESOTRO_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTRO_ULTMESOTRO_ULTMES (Set1)</th>
+<th align="left">OTRO_ULTMESOTRO_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">75</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_COMO_PREV_ZIKA</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_COMO_PREV_ZIKA (Set1)</th>
+<th align="left">OTROS_COMO_PREV_ZIKA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">38</td>
+<td align="left">LIMPIANDO DEBAJO DE LA CAMA.</td>
+<td align="left">LIMPIANDO DEBAJO DE LA CAMA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">LAVADO DE MANO.  NO DAR BESO EN LA MEJIA.</td>
+<td align="left">LAVADO DE MANO,NO DAR BESO EN LA MEJÍA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">limpiar el barrio</td>
+<td align="left">LIMPIAR EL BARRIO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">VOLTEANDO LOS BARRILES</td>
+<td align="left">VOLTEAR LOS BARRILES</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">voltear botellas</td>
+<td align="left">BOLTIAR BOTELLA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_CONTAGIARSE</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_CONTAGIARSE (Set1)</th>
+<th align="left">OTROS_CONTAGIARSE (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">52</td>
+<td align="left">NO LAVANDOSE LAS MANOS Y COMER COMIDOS MOSQUIADO</td>
+<td align="left">NO LAVÁNDOSE  LAS MANOS Y COMER</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_ELIMINAR_CRI</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_ELIMINAR_CRI (Set1)</th>
+<th align="left">OTROS_ELIMINAR_CRI (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">3</td>
+<td align="left">BOTAR FLORERO QUE NO ESTE EN USO</td>
+<td align="left">BOTAR FLOERO QUE NO ESTE EN USO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">ERRADICAR LA MUGRE</td>
+<td align="left">RADICANDO LA MUGRE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">rozar el monte</td>
+<td align="left">ROSAR MONTE</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">USAR DICEL</td>
+<td align="left">usar disel</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">botar bolsas</td>
+<td align="left">BOTAR BOLSAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_HIZO_ELIMINO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_HIZO_ELIMINO (Set1)</th>
+<th align="left">OTROS_HIZO_ELIMINO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">168</td>
+<td align="left">QUEMAN LA BASURA.</td>
+<td align="left">quema la basura</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">utilizo gas</td>
+<td align="left">UTILIZO GAS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">ELIMIN0 BARRILES DE LATA</td>
+<td align="left">ELIMINO BARRILES DE LATA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">ECHO DICEL</td>
+<td align="left">hechar disel</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">61</td>
+<td align="left">HECHO GAS CON SIPERMETRINA</td>
+<td align="left">hecho gas con cipermetrina</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_PLANIFICACION</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_PLANIFICACION (Set1)</th>
+<th align="left">OTROS_PLANIFICACION (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">37</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">175</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_PREV_TRANS_EMBARAZADA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_PREV_TRANS_EMBARAZADA (Set1)</th>
+<th align="left">OTROS_PREV_TRANS_EMBARAZADA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">89</td>
+<td align="left">SACAR LA BASURA</td>
+<td align="left">SACAR BASURA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">ALCOHOL EN GEL</td>
+<td align="left">ALCOHOL EN GEL.</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">ir a un puesto medico</td>
+<td align="left">IR A UN PUESTO MÉDICO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">ir a un puesto de salud</td>
+<td align="left">IR A UN PUESTO DE SALUD</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_RIESGOS</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_RIESGOS (Set1)</th>
+<th align="left">OTROS_RIESGOS (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">50</td>
+<td align="left">AFECTAR SU FORMACIÓN EL BEBE</td>
+<td align="left">AFECTAR SU FORMACIÓN EL BEBÉ</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">CUIDARSE ELLA, COMO USAR MOSQUITEROS</td>
+<td align="left">CUIDARSE ELLA,COMO USAR MOSQUITERO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">168</td>
+<td align="left">FALTA DE RESPIRACIÓN</td>
+<td align="left">falta de respiracion</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">183</td>
+<td align="left">PUEDE NACER BAJO PESO EL BEBE</td>
+<td align="left">PUEDE NACER BAJO PESO EL BEBÉ</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_SINTOMAS</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_SINTOMAS (Set1)</th>
+<th align="left">OTROS_SINTOMAS (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">104</td>
+<td align="left">alergia, diarrea</td>
+<td align="left">ALERGIA,DIARREA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">177</td>
+<td align="left">ZUMBIDO EN LOS OIDOS ,VOMITO</td>
+<td align="left">SUNVIDO EN LOS OÍDOS,VÓMITOS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">168</td>
+<td align="left">DIARREA</td>
+<td align="left">diarrea</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">132</td>
+<td align="left">DIARREA, VOMITO</td>
+<td align="left">DIARREA,VOMITO</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">vomito,diarrea</td>
+<td align="left">VOMITO,DIARREA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_TRATAMIENTOS</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_TRATAMIENTOS (Set1)</th>
+<th align="left">OTROS_TRATAMIENTOS (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">11</td>
+<td align="left">ir al centron de salud</td>
+<td align="left">IR AL CENTRO DE SALUD</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">117</td>
+<td align="left">SUERO ,ACETOMINOFEN</td>
+<td align="left">SUERO,ACETAMINOFEN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">177</td>
+<td align="left">SUERO Y ACETOMINOFEN</td>
+<td align="left">SUERO Y ACETAMINOFEN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">186</td>
+<td align="left">ACETAMINOFEN</td>
+<td align="left">ACETOMINOFEN</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">180</td>
+<td align="left">RECURRIR AL CENTRO DE SALUD.</td>
+<td align="left">RECURRIR AL CENTRO DE SALUD</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  OTROS_VEHICULOS</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">OTROS_VEHICULOS (Set1)</th>
+<th align="left">OTROS_VEHICULOS (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">132</td>
+<td align="left">MICRO BUS</td>
+<td align="left">MICROBUS</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">CAMIONCITO</td>
+<td align="left">CAMIONETA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">131</td>
+<td align="left">CAMIÓN</td>
+<td align="left">CAMION</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PAREJA_CONDON_SIEMPRE</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PAREJA_CONDON_SIEMPRE (Set1)</th>
+<th align="left">PAREJA_CONDON_SIEMPRE (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">2</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PAREJA_USO_CONDON</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PAREJA_USO_CONDON (Set1)</th>
+<th align="left">PAREJA_USO_CONDON (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">11</td>
+<td align="left">NA</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">NA</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PAREJA_VIVECASA</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PAREJA_VIVECASA (Set1)</th>
+<th align="left">PAREJA_VIVECASA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">173</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">155</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">98</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">88</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PASTILLA_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PASTILLA_DIRIGIDO (Set1)</th>
+<th align="left">PASTILLA_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">186</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">67</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PASTILLA_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PASTILLA_ESPONTANEO (Set1)</th>
+<th align="left">PASTILLA_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">4</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">67</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">186</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PASTILLA_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PASTILLA_HA_USADO (Set1)</th>
+<th align="left">PASTILLA_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">51</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">147</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PASTILLA_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PASTILLA_ULTMES (Set1)</th>
+<th align="left">PASTILLA_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">6</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PPMS_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PPMS_DIRIGIDO (Set1)</th>
+<th align="left">PPMS_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">37</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">81</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PPMS_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PPMS_ESPONTANEO (Set1)</th>
+<th align="left">PPMS_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">81</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">93</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PPMS_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PPMS_HA_USADO (Set1)</th>
+<th align="left">PPMS_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">76</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">189</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PPMS_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PPMS_ULTMES (Set1)</th>
+<th align="left">PPMS_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">6</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">152</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__10</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__10 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__10 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">22</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__11</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__11 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__11 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">22</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__12</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__12 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__12 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">61</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__14</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__14 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__14 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">39</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__3 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">3</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">57</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__4</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__4 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__4 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">3</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">57</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__7</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__7 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__7 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">22</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__8</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__8 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__8 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">22</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  PREV<em>TRANS_EMBARAZADA</em>__9</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__9 (Set1)</th>
+<th align="left">PREV<em>TRANS_EMBARAZADA</em>__9 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">95</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  QUIEN<em>VISITAS_REUNION</em>__2</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">QUIEN<em>VISITAS_REUNION</em>__2 (Set1)</th>
+<th align="left">QUIEN<em>VISITAS_REUNION</em>__2 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">42</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RELATION_ULT3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RELATION_ULT3 (Set1)</th>
+<th align="left">RELATION_ULT3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">11</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  REPELENTE</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">REPELENTE (Set1)</th>
+<th align="left">REPELENTE (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">62</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  REPELENTE_ULTDIA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">REPELENTE_ULTDIA (Set1)</th>
+<th align="left">REPELENTE_ULTDIA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">62</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RETIRO_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RETIRO_DIRIGIDO (Set1)</th>
+<th align="left">RETIRO_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">24</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RETIRO_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RETIRO_HA_USADO (Set1)</th>
+<th align="left">RETIRO_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">35</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RETIRO_ULTMES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RETIRO_ULTMES (Set1)</th>
+<th align="left">RETIRO_ULTMES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">63</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RIESGO_BARRIO_ZIKA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RIESGO_BARRIO_ZIKA (Set1)</th>
+<th align="left">RIESGO_BARRIO_ZIKA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">99</td>
+<td align="left">3</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">68</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RIESGO_BEBE</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RIESGO_BEBE (Set1)</th>
+<th align="left">RIESGO_BEBE (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">89</td>
+<td align="left">0</td>
+<td align="left">98</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RIESGO_CASA_ZIKA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RIESGO_CASA_ZIKA (Set1)</th>
+<th align="left">RIESGO_CASA_ZIKA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">128</td>
+<td align="left">5</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RITMO_DIRIGIDO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RITMO_DIRIGIDO (Set1)</th>
+<th align="left">RITMO_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">111</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  RITMO_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">RITMO_ESPONTANEO (Set1)</th>
+<th align="left">RITMO_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">111</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SERVICIO<em>HIGIENICO</em>__1</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SERVICIO<em>HIGIENICO</em>__1 (Set1)</th>
+<th align="left">SERVICIO<em>HIGIENICO</em>__1 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">49</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SERVICIO<em>HIGIENICO</em>__2</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SERVICIO<em>HIGIENICO</em>__2 (Set1)</th>
+<th align="left">SERVICIO<em>HIGIENICO</em>__2 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">18</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SERVICIO<em>HIGIENICO</em>__3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SERVICIO<em>HIGIENICO</em>__3 (Set1)</th>
+<th align="left">SERVICIO<em>HIGIENICO</em>__3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">18</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SEXO_EDAD_DIAGNOSTICADO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SEXO_EDAD_DIAGNOSTICADO (Set1)</th>
+<th align="left">SEXO_EDAD_DIAGNOSTICADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">122</td>
+<td align="left">f13a</td>
+<td align="left">F13A</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">M23A F22A</td>
+<td align="left">M23A, F22A</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">104</td>
+<td align="left">NA</td>
+<td align="left">M15A, F30A</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">62</td>
+<td align="left">F35A  F7A  F13  M32A</td>
+<td align="left">F36A, F7A, F13A, M32A</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">58</td>
+<td align="left">F38A</td>
+<td align="left">f38a</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SINTOMAS___3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SINTOMAS___3 (Set1)</th>
+<th align="left">SINTOMAS___3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">24</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SINTOMAS___4</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SINTOMAS___4 (Set1)</th>
+<th align="left">SINTOMAS___4 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">24</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  SINTOMAS___5</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">SINTOMAS___5 (Set1)</th>
+<th align="left">SINTOMAS___5 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">11</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">64</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  T_DIRIGIDO</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">T_DIRIGIDO (Set1)</th>
+<th align="left">T_DIRIGIDO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">61</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">169</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">86</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">68</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">189</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  T_ESPONTANEO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">T_ESPONTANEO (Set1)</th>
+<th align="left">T_ESPONTANEO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">68</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">86</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  T_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">T_HA_USADO (Set1)</th>
+<th align="left">T_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">169</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">61</td>
+<td align="left">0</td>
+<td align="left">NA</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">47</td>
+<td align="left">NA</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  TIPO_CASA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">TIPO_CASA (Set1)</th>
+<th align="left">TIPO_CASA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">183</td>
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">138</td>
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  TOTAL_MUJERES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">TOTAL_MUJERES (Set1)</th>
+<th align="left">TOTAL_MUJERES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">35</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">143</td>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  TOTAL_PERSONAS</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">TOTAL_PERSONAS (Set1)</th>
+<th align="left">TOTAL_PERSONAS (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">171</td>
+<td align="left">5</td>
+<td align="left">8</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">105</td>
+<td align="left">5</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  TOTAL_VARONES</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">TOTAL_VARONES (Set1)</th>
+<th align="left">TOTAL_VARONES (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">35</td>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">143</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  TRATAMIENTOS<em>RECOMIENDAN</em>__3</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">TRATAMIENTOS<em>RECOMIENDAN</em>__3 (Set1)</th>
+<th align="left">TRATAMIENTOS<em>RECOMIENDAN</em>__3 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">65</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  TRATAMIENTOS<em>RECOMIENDAN</em>__97</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">TRATAMIENTOS<em>RECOMIENDAN</em>__97 (Set1)</th>
+<th align="left">TRATAMIENTOS<em>RECOMIENDAN</em>__97 (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">5</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">109</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  ULTIMAVEZ_VISITA_REUNION</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">ULTIMAVEZ_VISITA_REUNION (Set1)</th>
+<th align="left">ULTIMAVEZ_VISITA_REUNION (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">29</td>
+<td align="left">4</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  VASECTOMIA_HA_USADO</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">VASECTOMIA_HA_USADO (Set1)</th>
+<th align="left">VASECTOMIA_HA_USADO (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">24</td>
+<td align="left">NA</td>
+<td align="left">0</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  VIVE_CASA</h4>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">VIVE_CASA (Set1)</th>
+<th align="left">VIVE_CASA (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">164</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+<h4>Column -  ZIKA_TRANS_SEXUAL</h4>
+
+<p>Showing sample of size 5</p>
+
+<table><thead>
+<tr>
+<th align="left">RECORD_ID</th>
+<th align="left">ZIKA_TRANS_SEXUAL (Set1)</th>
+<th align="left">ZIKA_TRANS_SEXUAL (Set2)</th>
+<th align="left">Type (Set1)</th>
+<th align="left">Type (Set2)</th>
+<th align="left">Difference</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">88</td>
+<td align="left">2</td>
+<td align="left">98</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">77</td>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">108</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">140</td>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">character</td>
+<td align="left">character</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+</body>
+
+</html>
