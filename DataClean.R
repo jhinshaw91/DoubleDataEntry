@@ -23,7 +23,11 @@ mismatches <- generateMismatchData(compSets, Set1, Set2)
 
 mismatches
 
+locateMismatches(Set1, Set2, keys = NULL, maxMismatches = NA)
+
+
 saveReport(compSets, reportName = 'testReport')
+
 
 
 
